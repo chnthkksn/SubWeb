@@ -1,0 +1,131 @@
+ .nav {
+    top: 0;
+    position: fixed;
+    width: 95%;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 99;
+}
+
+.nav > h1 > a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.nav-ul {
+    list-style: none;
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0 2px 0 0;
+    align-items: center;
+    width: 25%;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item > a:hover ,.nav-item > a:active {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.icon {
+    display: grid;
+    place-items: end;
+    cursor: pointer;
+    height: 3vh;
+    width: 30%;
+    transition: all 0.25s cubic-bezier(.17,.67,.83,.67);
+}
+
+.icon:active , .icon:hover {
+    color: var(--accent);
+    height: 3vh;
+}
+
+.menu{
+    display: none;
+}
+
+.mobile-header {
+    display: none;
+    color: var(--accent);
+}
+.desktop-header {
+    display: block;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-ul {
+        display: flex;;
+        flex-direction: column;
+        position: fixed;
+        right: -75%;
+        top: 0;
+        height: 100%;
+        justify-content: center;
+        gap: 4rem;
+        padding: 0 20% 0 20%;
+        background-color: var(--bg-secondary);
+        align-items: center;
+        transition: 0.5s cubic-bezier(.17,.67,.83,.67);
+    }
+
+    .icon {
+        width: 20%;
+        display: grid;
+        place-items: center;
+    }
+
+    .icon > svg {
+        height: 3vh;
+        width: 3vh;
+    }
+
+
+    .menu {
+        display: grid;
+        place-items: center;
+        z-index: 100;
+        height: 7vh;
+        width: 20%;
+    }
+
+    .menu > svg {
+        height: 3vh;
+        width: 3vh;
+        transition: all 0.25s cubic-bezier(.17,.67,.83,.67);
+    }
+
+    .menu > svg:hover {
+        color: var(--accent);
+    }
+
+    .nav-active {
+        right: 0;
+        transition: 0.3s ease-in-out;
+        z-index: 10;
+    }
+    .mobile-header {
+        display: flex;
+        margin: 5px;
+        max-width: 50%;
+        text-align: center;
+    }
+    .desktop-header {
+        display: none;
+    }
+
+}

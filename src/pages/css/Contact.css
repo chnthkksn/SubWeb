@@ -1,0 +1,44 @@
+.contact-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.contactlist {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contactlist h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1.5rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.contactlist h1:hover {
+    color: var(--accent);
+    font-size: 1.5rem;
+    transform: scale(1.05);
+    
+}
+
+.contactlist a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+@media screen and (max-width: 768px) {
+    .contact-div{
+        height: 80vh;
+    }
+}
